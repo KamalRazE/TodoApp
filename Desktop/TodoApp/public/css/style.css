@@ -1,0 +1,180 @@
+/*  Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #A683E3, #E4E9FD);
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Container */
+.todo-container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    padding: 30px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #444;
+}
+
+/* Filter Form */
+.filter-form {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+.filter-form select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+/* Add Task */
+.add-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.add-form input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+}
+.add-form select {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+.add-btn {
+    background: #A683E3;
+    border: none;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.add-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Task List */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f9f9ff;
+    border-radius: 12px;
+    padding: 12px 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+.task-item:hover {
+    transform: translateY(-2px);
+}
+
+/* Editable text */
+.task-item input[type="text"] {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    color: #333;
+    width: 250px;
+}
+.task-item input[type="text"].done {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Buttons */
+.toggle-btn, .edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 4px;
+    transition: transform 0.2s;
+}
+.toggle-btn:hover, .edit-btn:hover, .delete-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Priority Badge */
+.badge {
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.badge.high {
+    background: #ff6b6b;
+    color: #fff;
+}
+.badge.medium {
+    background: #ffd93d;
+    color: #333;
+}
+.badge.low {
+    background: #6bcf6b;
+    color: #fff;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+.footer span {
+    font-size: 14px;
+    color: #555;
+}
+.clear-btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    background: #ff6b6b;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.clear-btn:hover {
+    background: #e05555;
+}
+
+/* Empty state */
+.empty {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin: 30px 0;
+}
+
+/* Animations */
+    /* @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(10px);}
+        to {opacity: 1; transform: translateY(0);}
+    } */
